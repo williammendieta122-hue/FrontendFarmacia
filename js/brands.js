@@ -1,12 +1,30 @@
-const modal = document.getElementById("brandModal");
-const btnOpen = document.getElementById("btnOpenModal");
-const btnClose = document.getElementById("btnCloseModal");
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("brandModal");
+  const btnOpen = document.getElementById("btnOpenModal");
+  const btnClose = document.getElementById("btnCloseModal");
+  const btnCancel = document.getElementById("btnCancelModal");
 
-btnOpen.onclick = () => modal.classList.add("active");
-btnClose.onclick = () => modal.classList.remove("active");
+  const closeModal = () => {
+    if (modal) {
+      modal.classList.remove("active");
+    }
+  };
 
-window.onclick = (event) => {
-  if (event.target == modal) {
-    modal.classList.remove("active");
+  if (btnOpen && modal) {
+    btnOpen.addEventListener("click", () => modal.classList.add("active"));
   }
-};
+
+  if (btnClose) {
+    btnClose.addEventListener("click", closeModal);
+  }
+
+  if (btnCancel) {
+    btnCancel.addEventListener("click", closeModal);
+  }
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+});

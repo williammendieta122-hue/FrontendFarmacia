@@ -1,21 +1,25 @@
-const continer = document.querySelector(".continer");
-const btnSingIn = document.getElementById("btn-sing-in"); // Este es el del panel de bienvenida
-const btnSingUp = document.getElementById("btn-sing-up");
-const btnLoginSubmit = document.getElementById("btn-login-submit"); // El nuevo ID del botón del formulario
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".container");
+  const btnSignIn = document.getElementById("btn-sign-in");
+  const btnSignUp = document.getElementById("btn-sign-up");
+  const btnLoginSubmit = document.getElementById("btn-login-submit");
 
-btnSingIn.addEventListener("click", () => {
-  continer.classList.remove("toogle");
-});
+  if (btnSignIn && container) {
+    btnSignIn.addEventListener("click", () => {
+      container.classList.remove("toggle");
+    });
+  }
 
-if (btnSingUp) {
-  btnSingUp.addEventListener("click", () => {
-    continer.classList.add("toogle");
-  });
-}
+  if (btnSignUp && container) {
+    btnSignUp.addEventListener("click", () => {
+      container.classList.add("toggle");
+    });
+  }
 
-// Evento para redireccionar al Sidebar
-btnLoginSubmit.addEventListener("click", (e) => {
-  // Evitamos que el formulario se envíe de forma tradicional si fuera necesario
-  e.preventDefault();
-  window.location.href = "pages/components/sidebar.html";
+  if (btnLoginSubmit) {
+    btnLoginSubmit.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = "/pages/home.html";
+    });
+  }
 });
