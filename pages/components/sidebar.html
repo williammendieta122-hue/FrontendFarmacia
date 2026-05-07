@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="/css/components/sidebar.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <h1 class="logo">AdminPanel</h1>
+        <div class="user-info">
+          <span class="user-name">William Cortez</span>
+          <div class="user-avatar">WC</div>
+        </div>
+      </div>
+    </header>
+    <nav class="sidebar" id="main-sidebar">
+      <div class="sidebar-header">
+        <div class="logo-container">
+          <i class="fa-solid fa-plus logo-icon"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">FARMACIA</span>
+          <span class="brand-subname">GÉNESIS</span>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li class="nav-item" onclick="loadComponent('inicio')">
+          <i class="fa-solid fa-house"></i>
+          <a href="/pages/home.html"><span class="link-name">Inicio</span></a>
+        </li>
+        <li class="nav-item" onclick="loadComponent('ventas')">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <a href="/pages/sales.html"><span class="link-name">Ventas</span></a>
+        </li>
+        <li class="nav-item" onclick="loadComponent('inventario')">
+          <i class="fa-solid fa-table-cells-large"></i>
+          <a href="/pages/inventory.html"
+            ><span class="link-name">Inventario</span></a
+          >
+        </li>
+        <li class="nav-item" onclick="loadComponent('reportes')">
+          <i class="fa-solid fa-chart-column"></i>
+          <a href="/pages/reports.html"
+            ><span class="link-name">Reportes</span></a
+          >
+        </li>
+        <li class="nav-item" onclick="loadComponent('catalogos')">
+          <i class="fa-solid fa-cubes"></i>
+          <a href="/pages/catalogs.html"
+            ><span class="link-name">Catálogos</span></a
+          >
+        </li>
+        <li class="nav-item" onclick="loadComponent('ajustes')">
+          <i class="fa-solid fa-gear"></i>
+          <a href="#"><span class="link-name">Ajustes</span></a>
+        </li>
+      </ul>
+      <li class="nav-item" onclick="loadComponent('ajustes')">
+        <i
+          class="fa-solid fa-arrow-right-from-bracket"
+          style="color: rgb(238, 238, 238)"
+        ></i>
+        <a href="/index.html" class="long-out"
+          ><span class="link-name">cerrar sesión</span></a
+        >
+      </li>
+    </nav>
+  </body>
+</html>

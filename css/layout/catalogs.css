@@ -1,0 +1,22 @@
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px), 1fr);
+  gap: inherit;
+  background-color: blue;
+  margin-left: 40%;
+  margin-top: 10%;
+}
+
+header {
+  position: fixed;
+}
+
+.container {
+  background-color: beige;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: unset;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
